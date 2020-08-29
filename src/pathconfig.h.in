@@ -1,0 +1,7 @@
+#ifndef _pathconfig_h
+#define _pathconfig_h
+
+#include <string>
+
+const std::string shaders_folder{"@SHADERS_FOLDER@"};
+#endif
