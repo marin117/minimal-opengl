@@ -1,4 +1,4 @@
-project(shader_playground)
+project(minimal-opengl)
 
 cmake_minimum_required(VERSION 3.18)
 
@@ -7,7 +7,7 @@ add_definitions(-Wextra)
 add_definitions(-pedantic)
 add_definitions(-pthread)
 
-set(BINARY_NAME minimal_opengl)
+set(BINARY_NAME minimal-opengl)
 
 cmake_minimum_required(VERSION 3.18)
 
@@ -36,6 +36,6 @@ add_executable(${BINARY_NAME} ${SHADER_SRC} main.cpp)
 target_sources(${BINARY_NAME} PRIVATE ${SHADER_FILES} )
 set_property(TARGET ${BINARY_NAME} PROPERTY CXX_STANDARD 17)
 target_include_directories(${BINARY_NAME} PRIVATE ${PROJECT_BINARY_DIR})
-target_link_libraries( ${BINARY_NAME} ${OPENGL_LIBRARIES} ${GLEW_LIBRARIES} ${GLFW_LIBRARIES} ${GLM_LIBRARIES})
+target_link_libraries( ${BINARY_NAME} ${OPENGL_LIBRARIES} ${GLEW_LIBRARIES} glfw ${GLM_LIBRARIES})
 
 
