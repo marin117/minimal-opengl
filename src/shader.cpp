@@ -43,7 +43,7 @@ Shader::Shader(const std::vector<ShaderInfo>& shaders)
         }
 
         // Compile Shader
-        cout << "Compiling shader :\n" << s.file_path.c_str();
+        cout << "Compiling shader :\n" << s.file_path.c_str() << "\n";
         char const* sourcePointer = shaderCode.c_str();
         glShaderSource(id, 1, &sourcePointer, nullptr);
         glCompileShader(id);
